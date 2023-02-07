@@ -1,0 +1,331 @@
+body,
+html {
+    height: 100%;
+    font-family: "Montserrat", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.form-wrapper__title {
+    margin: 30px auto;
+}
+
+
+
+.slider {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    gap: 25px;
+    margin: 0 auto;
+}
+
+@media (min-width: 1200px) {
+    .slider {
+        max-width: 1440px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .slider {
+        max-width: 768px;
+    }
+
+    .form-wrapper {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .slider {
+        max-width: 350px;
+    }
+}
+
+
+.slider.one-card .start-deck {
+    opacity: 0;
+    transform: translate(-15px, 0px);
+}
+
+.form-wrapper form .slider__slide {
+    height: 369px;
+    width: 250px;
+    border-radius: 6px;
+    position: absolute;
+    background-color: white;
+    cursor: pointer;
+    outline: 3px solid transparent;
+}
+
+.form-wrapper form .slider__slide:hover {
+    outline: 3px solid #1fbf9b;
+}
+
+.form-wrapper form .slider__slide-title {
+    color: black;
+    margin-bottom: 20px;
+    padding: 10px;
+    position: relative;
+}
+
+.form-wrapper form .slider__slide-title input {
+    margin-right: 10px;
+}
+
+.form-wrapper form .slider__slide.slide-visible {
+    position: initial;
+    z-index: 1;
+    -webkit-box-shadow: 3px 3px 11px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 3px 3px 11px 0px rgba(0, 0, 0, 0.25);
+}
+
+.form-wrapper form .slider__slide.slide-visible.next-transition {
+    animation: next;
+}
+
+@keyframes next {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-100% - 25px));
+    }
+}
+
+.form-wrapper form .slider__slide.slide-visible.prev-transition {
+    animation: prev;
+}
+
+@keyframes prev {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(100% + 25px));
+    }
+}
+
+.form-wrapper form .slider__slide.end-deck {
+    transform: translate(15px, 15px);
+    right: 0;
+}
+
+.form-wrapper form .slider__slide.start-deck {
+    transform: translate(-15px, 15px);
+    left: 0;
+}
+
+.form-wrapper form .slider__control {
+    margin: 30px auto 20px;
+    display: flex;
+    column-gap: 10px;
+    width: 100px;
+}
+.form-wrapper form .slider__control.prev{
+    transform: rotate(180deg);
+}
+.form-wrapper form .slider__control.prev,
+.form-wrapper form .slider__control.next {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.form-wrapper form .slider__control.disable.prev,
+.form-wrapper form .slider__control.disable.next {
+    pointer-events: none;
+    opacity: 0;
+}
+
+.form-wrapper form .slider__control.wait-transition.prev,
+.form-wrapper form .slider__control.wait-transition.next {
+    opacity: 0.3;
+}
+
+.slider img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 0 0 10px 10px;
+}
+
+.form-wrapper {
+    max-width: 1075px;
+    margin: 0 auto;
+}
+
+.form-wrapper__title {
+    font-size: 29px;
+    text-align: center;
+}
+
+.form-wrapper form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-wrapper form input[type="radio"]:checked::after{
+    background-color: #1fbf9b;
+    content: '';
+    height: 150%;
+    width: 150%;
+    top: -4px;
+    left: -4px;
+    border-radius: 50px;
+    
+}
+
+.form-wrapper form input[type=text],
+.form-wrapper form textarea,
+.form-wrapper form input[type=date],
+.form-wrapper form input[type=file],
+.form-wrapper form input[type=email],
+.form-wrapper form input[type=time],
+.form-wrapper form .cuenta-regresiva {
+    border-radius: 6px;
+    height: 42px;
+    border: none;
+    background-color: #f6fffd;
+    border: 1px solid #c3d6d2;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    font-size: 16px;
+    transition: outline 0.2s;
+    outline: 2px solid transparent;
+}
+
+.form-wrapper form input[type=file] {
+    padding: 8px;
+}
+
+.form-wrapper form input[type=date] {
+    width: 150px;
+}
+
+.form-wrapper form textarea {
+    padding: 8px;
+}
+
+.form-wrapper form input[type=time],
+.form-wrapper form .cuenta-regresiva {
+    width: 100px;
+}
+
+.form-wrapper form input[type=submit] {
+    height: 40px;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    border: none;
+    background-color: #64ffdc;
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.form-wrapper form input[type=submit]:hover {
+    background-color: #52dbbb;
+}
+
+.form-wrapper form input,
+.form-wrapper form textarea,
+.form-wrapper form .cuenta-regresiva,
+.form-wrapper form select {
+    position: relative;
+}
+
+.form-wrapper form input:focus,
+.form-wrapper form textarea:focus,
+.form-wrapper form .cuenta-regresiva:focus,
+.form-wrapper form select:focus {
+    outline: 2px solid #64ffdc;
+}
+
+.form-wrapper form input::after,
+.form-wrapper form textarea::after,
+.form-wrapper form .cuenta-regresiva::after,
+.form-wrapper form select::after {
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: #64ffdc;
+    position: absolute;
+    transition: width 0.2s;
+}
+
+.form-wrapper form input:focus::after,
+.form-wrapper form textarea:focus::after,
+.form-wrapper form .cuenta-regresiva:focus::after,
+.form-wrapper form select:focus::after {
+    width: 100%;
+}
+
+.form-wrapper form label {
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #3bc1a3;
+}
+
+.form-wrapper form .input-text-wrapper {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-wrapper form .input-text-wrapper input,
+.form-wrapper form .input-text-wrapper textarea,
+.form-wrapper form .input-text-wrapper select {
+    width: 100%;
+}
+
+.form-wrapper form .input-text-wrapper::after {
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: #64ffdc;
+    position: absolute;
+    transition: width 0.2s;
+}
+
+.form-wrapper form .input-text-wrapper:has(input:focus, textarea:focus, select:focus)::after {
+    width: 100%;
+}
+
+#map_ceremonia,
+#map_festejo {
+    height: 250px;
+}
+
+.wrap-ceremonia,
+.wrap-festejo {
+    display: flex;
+    flex-direction: column;
+    background-color: #e1fff8;
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.wrap-ceremonia iframe,
+.wrap-festejo iframe {
+    width: 100% !important;
+}
+
+.woocommerce .quantity input[type=number]{
+    width: 100px;
+}

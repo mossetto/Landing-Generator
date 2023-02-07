@@ -1,0 +1,231 @@
+/* Estilo para el contenedor de la cuadrícula */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+    border: 1px solid #52dbbb;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #e1fff8;
+
+}
+
+
+
+/* Estilo para las imágenes */
+.grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilo para el elemento que se va a arrastrar */
+.draggable {
+    cursor: move;
+    /* Muestra el cursor de arrastrar */
+}
+
+.header-popup {
+    display: flex;
+    justify-content: space-between;
+    max-width: 967px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.header-popup__title {
+    color: #f6fffd;
+    font-size: 30px;
+}
+
+.btn-cerrar-edicion {
+    height: 30px;
+    background-color: white;
+    border-radius: 15px;
+    border: none;
+    width: 100px;
+}
+
+.form-wrapper {
+    max-width: 1075px;
+    margin: 0 auto;
+    padding-bottom: 20vh;
+}
+
+/* estilos para la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 12px; /* ancho de la barra de desplazamiento */
+  background-color: #f2f2f2; /* color de fondo */
+}
+
+/* estilos para el thumb de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px; /* bordes redondos */
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3); /* sombra */
+  background-color: #52dbbb; /* color de la barra */
+}
+
+form.form-editar {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    height: 80vh;
+}
+
+form.form-editar input[type=text],
+form.form-editar textarea,
+form.form-editar input[type=date],
+form.form-editar input[type=file],
+form.form-editar input[type=email],
+form.form-editar input[type=time],
+form.form-editar .cuenta-regresiva {
+    border-radius: 6px;
+    height: 42px;
+    border: none;
+    background-color: #f6fffd;
+    border: 1px solid #c3d6d2;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    font-size: 16px;
+    transition: outline 0.2s;
+    outline: 2px solid transparent;
+}
+
+form.form-editar input[type=email] {
+    padding: 10px;
+}
+
+form.form-editar input[type=file] {
+    padding: 10px 10px 35px 10px;
+}
+
+form.form-editar input[type=date] {
+    width: 150px;
+}
+
+form.form-editar textarea {
+    padding: 8px;
+}
+
+form.form-editar input[type=time],
+form.form-editar .cuenta-regresiva {
+    width: 100px;
+}
+
+form.form-editar input[type=submit] {
+    height: 40px;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    border: none;
+    background-color: #64ffdc;
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+form.form-editar input[type=submit]:hover {
+    background-color: #52dbbb;
+}
+
+form.form-editar input,
+form.form-editar textarea,
+form.form-editar .cuenta-regresiva,
+form.form-editar select {
+    position: relative;
+}
+
+form.form-editar input:focus,
+form.form-editar textarea:focus,
+form.form-editar .cuenta-regresiva:focus,
+form.form-editar select:focus {
+    outline: 2px solid #1fbf9b;
+}
+
+form.form-editar input::after,
+form.form-editar textarea::after,
+form.form-editar .cuenta-regresiva::after,
+form.form-editar select::after {
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: #64ffdc;
+    position: absolute;
+    transition: width 0.2s;
+}
+
+form.form-editar input:focus::after,
+form.form-editar textarea:focus::after,
+form.form-editar .cuenta-regresiva:focus::after,
+form.form-editar select:focus::after {
+    width: 100%;
+}
+
+form.form-editar label {
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #3bc1a3;
+}
+
+@media (max-width: 640px) {
+    form.form-editar label {
+        padding: 14px;
+        width: auto;
+        font-size: 43px;
+        font-weight: 400;
+    }
+}
+
+form.form-editar .input-text-wrapper {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+form.form-editar .input-text-wrapper input,
+form.form-editar .input-text-wrapper textarea,
+form.form-editar .input-text-wrapper select {
+    width: 100%;
+}
+
+form.form-editar .input-text-wrapper::after {
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: #64ffdc;
+    position: absolute;
+    transition: width 0.2s;
+}
+
+form.form-editar .input-text-wrapper:has(input:focus, textarea:focus, select:focus)::after {
+    width: 100%;
+}
+
+.wrap-ceremonia,
+.wrap-festejo {
+    display: flex;
+    flex-direction: column;
+    background-color: #e1fff8;
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.wrap-ceremonia iframe,
+.wrap-festejo iframe {
+    width: 100% !important;
+}
+
+
+
