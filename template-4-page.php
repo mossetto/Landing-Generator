@@ -69,7 +69,7 @@ $cuenta_regresiva = get_field('cuenta_regresiva', get_the_ID());
 		}
 	</style>
 	<link rel="stylesheet" id="astra-theme-css-css"
-		href="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-content/themes/astra/assets/css/minified/main.min.css?ver=4.0.2" media="all">
+		href="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-content/themes/astra/assets/css/minified/main.min.css?ver=4.0.2" media="all">
 	<style id="astra-theme-css-inline-css">
 		.ast-no-sidebar .entry-content .alignfull {
 			margin-left: calc(-50vw + 50%);
@@ -3648,7 +3648,7 @@ $cuenta_regresiva = get_field('cuenta_regresiva', get_the_ID());
 	<link rel="stylesheet" id="astra-google-fonts-css"
 		href="https://fonts.googleapis.com/css?family=Inter%3A400%2C600%7CBrygada+1918%3A600%2C500&#038;display=fallback&#038;ver=4.0.2"
 		media="all">
-	<link rel="stylesheet" id="wp-block-library-css" href="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-includes/css/dist/block-library/style.min.css?ver=6.1.1"
+	<link rel="stylesheet" id="wp-block-library-css" href="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-includes/css/dist/block-library/style.min.css?ver=6.1.1"
 		media="all">
 	<style id="global-styles-inline-css">
 		body {
@@ -4171,9 +4171,9 @@ $cuenta_regresiva = get_field('cuenta_regresiva', get_the_ID());
 		}
 	</style>
 	<link rel="stylesheet" id="elementor-icons-css"
-		href="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.17.0" media="all">
+		href="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.17.0" media="all">
 	<link rel="stylesheet" id="elementor-frontend-css"
-		href="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-content/plugins/elementor/assets/css/frontend-lite.min.css?ver=3.10.1" media="all">
+		href="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-content/plugins/elementor/assets/css/frontend-lite.min.css?ver=3.10.1" media="all">
 	<style id="elementor-frontend-inline-css">
 		.elementor-kit-553 {
 			--e-global-color-primary: #6EC1E4;
@@ -4474,7 +4474,7 @@ $cuenta_regresiva = get_field('cuenta_regresiva', get_the_ID());
 		.elementor-554 .elementor-element.elementor-element-407fcbb:not(.elementor-motion-effects-element-type-background),
 		.elementor-554 .elementor-element.elementor-element-407fcbb>.elementor-motion-effects-container>.elementor-motion-effects-layer {
 			background-color: var(--e-global-color-astglobalcolor5);
-			background-image: url("<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-content/uploads/2021/08/lotus-spa-template-section-grad-bg.svg");
+			background-image: url("<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-content/uploads/2021/08/lotus-spa-template-section-grad-bg.svg");
 			background-position: 50vw 0px;
 			background-repeat: no-repeat;
 			background-size: contain;
@@ -4656,7 +4656,7 @@ $cuenta_regresiva = get_field('cuenta_regresiva', get_the_ID());
 
 		.elementor-554 .elementor-element.elementor-element-272e1e1:not(.elementor-motion-effects-element-type-background),
 		.elementor-554 .elementor-element.elementor-element-272e1e1>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-			background-image: url("<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-content/uploads/2021/08/lotus-spa-template-homepage-services-section-img-bg.jpg");
+			background-image: url("<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-content/uploads/2021/08/lotus-spa-template-homepage-services-section-img-bg.jpg");
 			background-position: center center;
 			background-repeat: no-repeat;
 			background-size: cover;
@@ -5697,18 +5697,18 @@ $cuenta_regresiva = get_field('cuenta_regresiva', get_the_ID());
 		}
 	</style>
 	<link rel="stylesheet" id="elementor-pro-css"
-		href="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-content/plugins/pro-elements/assets/css/frontend-lite.min.css?ver=3.8.0" media="all">
+		href="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-content/plugins/pro-elements/assets/css/frontend-lite.min.css?ver=3.8.0" media="all">
 	<link rel="stylesheet" id="font-awesome-5-all-css"
-		href="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=3.10.1" media="all">
+		href="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=3.10.1" media="all">
 	<link rel="stylesheet" id="font-awesome-4-shim-css"
-		href="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=3.10.1" media="all">
+		href="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=3.10.1" media="all">
 	<link rel="stylesheet" id="google-fonts-1-css"
 		href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap&#038;ver=6.1.1"
 		media="all">
 	<link rel="stylesheet" id="elementor-icons-shared-0-css"
-		href="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3" media="all">
+		href="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3" media="all">
 	<link rel="stylesheet" id="elementor-icons-fa-solid-css"
-		href="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.3" media="all">
+		href="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.3" media="all">
 	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 	<!--[if IE]>
 <script src='https://wpelementor.local/wp-content/themes/astra/assets/js/minified/flexibility.min.js?ver=4.0.2' id='astra-flexibility-js'></script>
@@ -5716,19 +5716,19 @@ $cuenta_regresiva = get_field('cuenta_regresiva', get_the_ID());
 flexibility(document.documentElement);
 </script>
 <![endif]-->
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.10.1"
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.10.1"
 		id="font-awesome-4-shim-js"></script>
-	<link rel="https://api.w.org/" href="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-json/index.html">
-	<link rel="alternate" type="application/json" href="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-json/wp/v2/pages/554/index.html">
+	<link rel="https://api.w.org/" href="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-json/index.html">
+	<link rel="alternate" type="application/json" href="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-json/wp/v2/pages/554/index.html">
 	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="./xmlrpc.php?rsd">
-	<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-includes/wlwmanifest.xml">
+	<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-includes/wlwmanifest.xml">
 	<meta name="generator" content="WordPress 6.1.1">
 	<link rel="canonical" href="./index.html">
 	<link rel="shortlink" href="./index.html">
 	<link rel="alternate" type="application/json+oembed"
-		href="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-json/oembed/1.0/embed/index.html?url=https%3A%2F%2F%2F">
+		href="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-json/oembed/1.0/embed/index.html?url=https%3A%2F%2F%2F">
 	<link rel="alternate" type="text/xml+oembed"
-		href="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-json/oembed/1.0/embed/index.html?url=https%3A%2F%2F%2F#038;format=xml">
+		href="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-json/oembed/1.0/embed/index.html?url=https%3A%2F%2F%2F#038;format=xml">
 </head>
 
 <body itemtype="https://schema.org/WebPage" itemscope="itemscope"
@@ -5886,7 +5886,7 @@ flexibility(document.documentElement);
 											<span class="site-logo-img"><a href="./index.html"
 													class="custom-logo-link transparent-custom-logo" rel="home"
 													itemprop="url" aria-label="wp_elementor"><img
-														src="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-content/uploads/2021/08/site-logo.svg"
+														src="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-content/uploads/2021/08/site-logo.svg"
 														class="astra-logo-svg" alt="" decoding="async"></a></span>
 										</div>
 										<!-- .site-branding -->
@@ -5980,7 +5980,7 @@ flexibility(document.documentElement);
 										<span class="site-logo-img"><a href="./index.html"
 												class="custom-logo-link transparent-custom-logo" rel="home"
 												itemprop="url" aria-label="wp_elementor"><img
-													src="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-content/uploads/2021/08/site-logo.svg"
+													src="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-content/uploads/2021/08/site-logo.svg"
 													class="astra-logo-svg" alt="" decoding="async"></a></span>
 									</div>
 									<!-- .site-branding -->
@@ -6268,7 +6268,7 @@ flexibility(document.documentElement);
 																class="elementor-wrapper elementor-fit-aspect-ratio elementor-open-inline">
 																<div class="elementor-video"></div>
 																<div class="elementor-custom-embed-image-overlay"
-																	style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-content/uploads/2021/08/lotus-spa-template-homepage-video-thumbnail.jpg);">
+																	style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-content/uploads/2021/08/lotus-spa-template-homepage-video-thumbnail.jpg);">
 																	<div class="elementor-custom-embed-play"
 																		role="button" aria-label="Play Video"
 																		tabindex="0">
@@ -6285,7 +6285,7 @@ flexibility(document.documentElement);
 														data-widget_type="icon-box.default">
 														<div class="elementor-widget-container">
 															<link rel="stylesheet"
-																href="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-content/plugins/elementor/assets/css/widget-icon-box.min.css">
+																href="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-content/plugins/elementor/assets/css/widget-icon-box.min.css">
 															<div class="elementor-icon-box-wrapper">
 																<div class="elementor-icon-box-icon">
 																	<span class="elementor-icon elementor-animation-">
@@ -6431,7 +6431,7 @@ flexibility(document.documentElement);
 																	display: inline-block
 																}
 															</style> <img decoding="async" width="400" height="600"
-																src="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-content/uploads/2021/08/lotus-spa-template-homepage-service-img.jpg"
+																src="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-content/uploads/2021/08/lotus-spa-template-homepage-service-img.jpg"
 																class="attachment-full size-full wp-image-59" alt=""
 																srcset="<?php echo $img_secundaria['url']; ?>"
 																sizes="(max-width: 400px) 100vw, 400px">
@@ -7161,7 +7161,7 @@ flexibility(document.documentElement);
 																	<div class="elementor-testimonial-meta-inner">
 																		<div class="elementor-testimonial-image">
 																			<img decoding="async" width="40" height="40"
-																				src="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-content/uploads/2021/08/lotus-spa-template-testimonial-avatar-img.jpg"
+																				src="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-content/uploads/2021/08/lotus-spa-template-testimonial-avatar-img.jpg"
 																				class="attachment-full size-full wp-image-62"
 																				alt="">
 																		</div>
@@ -7366,7 +7366,7 @@ flexibility(document.documentElement);
 																			aria-live="assertive"
 																			value="wpforms-submit">Save up to 50%
 																			today</button><img decoding="async"
-																			src="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-content/plugins/wpforms-lite/assets/images/submit-spin.svg"
+																			src="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-content/plugins/wpforms-lite/assets/images/submit-spin.svg"
 																			class="wpforms-submit-spinner"
 																			style="display: none;" width="26"
 																			height="26" alt="Loading">
@@ -7551,56 +7551,56 @@ flexibility(document.documentElement);
 	</div>
 	<!-- #page -->
 	<link rel="stylesheet" id="wpforms-base-css"
-		href="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-content/plugins/wpforms-lite/assets/css/wpforms-base.min.css?ver=1.7.9.1" media="all">
+		href="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-content/plugins/wpforms-lite/assets/css/wpforms-base.min.css?ver=1.7.9.1" media="all">
 	<script
 		id="astra-theme-js-js-extra">var astra = { "break_point": "921", "isRtl": "", "is_scroll_to_id": "", "is_scroll_to_top": "" };</script>
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-content/themes/astra/assets/js/minified/frontend.min.js?ver=4.0.2"
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-content/themes/astra/assets/js/minified/frontend.min.js?ver=4.0.2"
 		id="astra-theme-js-js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-content/plugins/pro-elements/assets/js/webpack-pro.runtime.min.js?ver=3.8.0"
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-content/plugins/pro-elements/assets/js/webpack-pro.runtime.min.js?ver=3.8.0"
 		id="elementor-pro-webpack-runtime-js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.10.1"
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.10.1"
 		id="elementor-webpack-runtime-js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-includes/js/jquery/jquery.min.js?ver=3.6.1" id="jquery-core-js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.10.1"
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-includes/js/jquery/jquery.min.js?ver=3.6.1" id="jquery-core-js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.10.1"
 		id="elementor-frontend-modules-js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.9"
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.9"
 		id="regenerator-runtime-js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-includes/js/dist/hooks.min.js?ver=4169d3cf8e8d95a3d6d5" id="wp-hooks-js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-includes/js/dist/i18n.min.js?ver=9e794f35a71bb98672ae" id="wp-i18n-js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-includes/js/dist/hooks.min.js?ver=4169d3cf8e8d95a3d6d5" id="wp-hooks-js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-includes/js/dist/i18n.min.js?ver=9e794f35a71bb98672ae" id="wp-i18n-js"></script>
 	<script id="wp-i18n-js-after">
 		wp.i18n.setLocaleData({ 'text directionltr': ['ltr'] });
 	</script>
 	<script
 		id="elementor-pro-frontend-js-before">var ElementorProFrontendConfig = { "ajaxurl": ".\/\/wp-admin\/admin-ajax.php", "nonce": "b1e5a1b040", "urls": { "assets": ".\/\/wp-content\/plugins\/pro-elements\/assets\/", "rest": ".\/\/wp-json\/" }, "shareButtonsNetworks": { "facebook": { "title": "Facebook", "has_counter": true }, "twitter": { "title": "Twitter" }, "linkedin": { "title": "LinkedIn", "has_counter": true }, "pinterest": { "title": "Pinterest", "has_counter": true }, "reddit": { "title": "Reddit", "has_counter": true }, "vk": { "title": "VK", "has_counter": true }, "odnoklassniki": { "title": "OK", "has_counter": true }, "tumblr": { "title": "Tumblr" }, "digg": { "title": "Digg" }, "skype": { "title": "Skype" }, "stumbleupon": { "title": "StumbleUpon", "has_counter": true }, "mix": { "title": "Mix" }, "telegram": { "title": "Telegram" }, "pocket": { "title": "Pocket", "has_counter": true }, "xing": { "title": "XING", "has_counter": true }, "whatsapp": { "title": "WhatsApp" }, "email": { "title": "Email" }, "print": { "title": "Print" } }, "facebook_sdk": { "lang": "en_US", "app_id": "" }, "lottie": { "defaultAnimationUrl": ".\/\/wp-content\/plugins\/pro-elements\/modules\/lottie\/assets\/animations\/default.json" } };</script>
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-content/plugins/pro-elements/assets/js/frontend.min.js?ver=3.8.0"
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-content/plugins/pro-elements/assets/js/frontend.min.js?ver=3.8.0"
 		id="elementor-pro-frontend-js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2"
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2"
 		id="elementor-waypoints-js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2" id="jquery-ui-core-js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2" id="jquery-ui-core-js"></script>
 	<script
 		id="elementor-frontend-js-before">var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "download": "Download", "downloadImage": "Download image", "fullscreen": "Fullscreen", "zoom": "Zoom", "share": "Share", "playVideo": "Play Video", "previous": "Previous", "next": "Next", "close": "Close" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": { "breakpoints": { "mobile": { "label": "Mobile", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Extra", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Extra", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } }, "version": "3.10.1", "is_static": false, "experimentalFeatures": { "e_dom_optimization": true, "e_optimized_assets_loading": true, "e_optimized_css_loading": true, "a11y_improvements": true, "additional_custom_breakpoints": true, "e_hidden_wordpress_widgets": true, "theme_builder_v2": true, "landing-pages": true, "kit-elements-defaults": true, "page-transitions": true, "notes": true, "loop": true, "form-submissions": true, "e_scroll_snap": true }, "urls": { "assets": ".\/\/wp-content\/plugins\/elementor\/assets\/" }, "settings": { "page": [], "editorPreferences": [] }, "kit": { "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description" }, "post": { "id": 554, "title": "wp_elementor", "excerpt": "", "featuredImage": false } };</script>
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.10.1"
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.10.1"
 		id="elementor-frontend-js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-content/plugins/pro-elements/assets/js/elements-handlers.min.js?ver=3.8.0"
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-content/plugins/pro-elements/assets/js/elements-handlers.min.js?ver=3.8.0"
 		id="pro-elements-handlers-js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-includes/js/underscore.min.js?ver=1.13.4" id="underscore-js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-includes/js/underscore.min.js?ver=1.13.4" id="underscore-js"></script>
 	<script id="wp-util-js-extra">var _wpUtilSettings = { "ajax": { "url": "\/wp-admin\/admin-ajax.php" } };</script>
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-includes/js/wp-util.min.js?ver=6.1.1" id="wp-util-js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-includes/js/wp-util.min.js?ver=6.1.1" id="wp-util-js"></script>
 	<script
 		id="wpforms-elementor-js-extra">var wpformsElementorVars = { "captcha_provider": "recaptcha", "recaptcha_type": "v2" };</script>
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-content/plugins/wpforms-lite/assets/js/integrations/elementor/frontend.min.js?ver=1.7.9.1"
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-content/plugins/wpforms-lite/assets/js/integrations/elementor/frontend.min.js?ver=1.7.9.1"
 		id="wpforms-elementor-js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-content/plugins/wpforms-lite/assets/lib/jquery.validate.min.js?ver=1.19.5"
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-content/plugins/wpforms-lite/assets/lib/jquery.validate.min.js?ver=1.19.5"
 		id="wpforms-validation-js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-content/plugins/wpforms-lite/assets/lib/mailcheck.min.js?ver=1.1.2"
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-content/plugins/wpforms-lite/assets/lib/mailcheck.min.js?ver=1.1.2"
 		id="wpforms-mailcheck-js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-content/plugins/wpforms-lite/assets/lib/punycode.min.js?ver=1.0.0"
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-content/plugins/wpforms-lite/assets/lib/punycode.min.js?ver=1.0.0"
 		id="wpforms-punycode-js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-content/plugins/wpforms-lite/assets/js/utils.min.js?ver=1.7.9.1"
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-content/plugins/wpforms-lite/assets/js/utils.min.js?ver=1.7.9.1"
 		id="wpforms-generic-utils-js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing1/wp-content/plugins/wpforms-lite/assets/js/wpforms.min.js?ver=1.7.9.1" id="wpforms-js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/landing4/wp-content/plugins/wpforms-lite/assets/js/wpforms.min.js?ver=1.7.9.1" id="wpforms-js"></script>
 	<script>/(trident|msie)/i.test(navigator.userAgent) && document.getElementById && window.addEventListener && window.addEventListener("hashchange", function () { var t, e = location.hash.substring(1); /^[A-z0-9_-]+$/.test(e) && (t = document.getElementById(e)) && (/^(?:a|select|input|button|textarea)$/i.test(t.tagName) || (t.tabIndex = -1), t.focus()) }, !1);</script>
 	<script type="text/javascript">
 		/* <![CDATA[ */
