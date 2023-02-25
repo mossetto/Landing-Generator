@@ -86,6 +86,37 @@ function aplicar_orden_paginas($query)
 }
 
 
+// Incluye TGM Plugin Activation Library
+require_once get_template_directory() . '/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php';
+
+add_action( 'tgmpa_register', 'my_theme_register_required_plugins' );
+
+function my_theme_register_required_plugins() {
+    $plugins = array(
+        array(
+            'name' => 'WooCommerce',
+            'slug' => 'woocommerce',
+            'required' => false,
+            'force_activation' => false,
+            'force_deactivation' => false
+        )
+    );
+
+    $config = array(
+        'id' => 'my_theme_tgmpa',
+        'default_path' => '',
+        'menu' => 'my-theme-plugins',
+        'parent_slug' => 'themes.php',
+        'capability' => 'edit_theme_options',
+        'has_notices' => true,
+        'dismissable' => true,
+        'dismiss_msg' => '',
+        'is_automatic' => false,
+        'message' => ''
+    );
+
+    tgmpa( $plugins, $config );
+}
 
 add_filter('woocommerce_checkout_fields', 'custom_override_checkout_fields');
 function custom_override_checkout_fields($fields)
