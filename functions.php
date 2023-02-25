@@ -1,13 +1,13 @@
 <?php
 /**
- * Twenty Twenty-Two functions and definitions
- *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
- *
- * @package WordPress
- * @subpackage Twenty_Twenty_Two
- * @since Twenty Twenty-Two 1.0
- */
+	* Twenty Twenty-Two functions and definitions
+	*
+	* @link https://developer.wordpress.org/themes/basics/theme-functions/
+	*
+	* @package WordPress
+	* @subpackage Twenty_Twenty_Two
+	* @since Twenty Twenty-Two 1.0
+	*/
 
 // Aumenta el tiempo de ejecución máximo
 ini_set('max_execution_time', 999);
@@ -18,12 +18,12 @@ ini_set('memory_limit', '999M');
 if (!function_exists('twentytwentytwo_support')):
 
 	/**
-	 * Sets up theme defaults and registers support for various WordPress features.
-	 *
-	 * @since Twenty Twenty-Two 1.0
-	 *
-	 * @return void
-	 */
+		* Sets up theme defaults and registers support for various WordPress features.
+		*
+		* @since Twenty Twenty-Two 1.0
+		*
+		* @return void
+		*/
 	function twentytwentytwo_support()
 	{
 
@@ -42,12 +42,12 @@ add_action('after_setup_theme', 'twentytwentytwo_support');
 if (!function_exists('twentytwentytwo_styles')):
 
 	/**
-	 * Enqueue styles.
-	 *
-	 * @since Twenty Twenty-Two 1.0
-	 *
-	 * @return void
-	 */
+		* Enqueue styles.
+		*
+		* @since Twenty Twenty-Two 1.0
+		*
+		* @return void
+		*/
 	function twentytwentytwo_styles()
 	{
 		// Register theme stylesheet.
@@ -188,10 +188,10 @@ add_action('template_redirect', 'add_to_cart_and_checkout');
 
 // function custom_display_order_count($user)
 // {
-// 	// obtén la cantidad de pedidos con un estado "complete" que tiene el usuario
-// 	$order_count = wc_get_customer_order_count($user->ID, 'completed');
-// 	$field_key = "cantidad_de_sitios_disponibles"; // sustituye este valor por la clave del campo que has creado en ACF
-// 	update_field($field_key, $order_count, "user_{$user->ID}");
+// // obtén la cantidad de pedidos con un estado "complete" que tiene el usuario
+// $order_count = wc_get_customer_order_count($user->ID, 'completed');
+// $field_key = "cantidad_de_sitios_disponibles"; // sustituye este valor por la clave del campo que has creado en ACF
+// update_field($field_key, $order_count, "user_{$user->ID}");
 // }
 // add_action('show_user_profile', 'custom_display_order_count');
 // add_action('edit_user_profile', 'custom_display_order_count');
@@ -208,7 +208,7 @@ function update_user_field_on_order_complete($order_id)
 	$user_id = $order->get_user_id();
 
 	$quantityEnable = get_field('cantidad_de_sitios_disponibles', 'user_' . $user_id);
-	
+
 	$newQuantity = $quantityEnable + $quantity;
 
 	// Actualiza el campo "Cantidad_de_sitios_disponibles" del usuario con la cantidad de productos en la orden
@@ -312,3 +312,88 @@ add_action( 'wp_enqueue_scripts', 'homeScriptSlider' );
 function homeScriptSlider() {
 wp_enqueue_style( 'home_script', get_template_directory_uri() . '/assets/js-home/script-slider.js' );
 }
+
+
+// usa el pluggin acf
+add_filter( 'acf/settings/path', 'my_acf_settings_path' );
+function my_acf_settings_path( $path ) {
+	$path = get_stylesheet_directory() . '/plugins/advanced-custom-fields-pro-master/';
+	return $path;
+}
+
+add_filter( 'acf/settings/dir', 'my_acf_settings_dir' );
+function my_acf_settings_dir( $dir ) {
+	$dir = get_stylesheet_directory_uri() . '/plugins/advanced-custom-fields-pro-master/';
+	return $dir;
+}
+
+include_once( get_stylesheet_directory() . '/plugins/advanced-custom-fields-pro-master/acf.php' );
+
+
+// Crear paginas automaticamentes
+add_action( 'after_switch_theme', 'my_custom_pages' );
+
+function my_custom_pages() {
+
+	// Array con las páginas que deseas crear
+	$pages = array(
+		array(
+			'title' => 'Inicio',
+			'template' => 'inicio-page.php'
+		),
+		array(
+			'title' => 'Crea tu sitio',
+			'template' => 'formulario-galeria-page.php'
+		),
+		array(
+			'title' => 'Formulario procesado',
+			'template' => 'formulario-procesado-page.php'
+		),
+		array(
+			'title' => 'Formulario modificado',
+			'template' => 'formulario-modificado-page.php'
+		)
+	);
+
+	foreach ($pages as $page) {
+
+		$page_exists = get_page_by_title( $page['title'] );
+
+		if( ! $page_exists ) {
+
+			$new_page = array(
+				'post_title' => $page['title'],
+				'post_status' => 'publish',
+				'post_type' => 'page',
+				'page_template' => $page['template']
+			);
+
+			// Inserta la página en la base de datos
+			wp_insert_post( $new_page );
+		}
+	}
+	
+	// Obtiene la página "Inicio" creada automáticamente
+	$homepage = get_page_by_title( 'Inicio' );
+
+	// Establece la página "Inicio" como la página de inicio
+	update_option( 'page_on_front', $homepage->ID );
+	update_option( 'show_on_front', 'page' );
+}
+
+
+add_filter('acf/settings/save_json', 'my_acf_json_save_point');
+
+function my_acf_json_save_point( $path ) {
+	$path = get_stylesheet_directory() . '/acf-json';
+	return $path;
+}
+
+add_filter('acf/settings/load_json', 'my_acf_json_load_point');
+
+function my_acf_json_load_point( $paths ) {
+	$paths[] = get_stylesheet_directory() . '/acf-json';
+	return $paths;
+}
+
+
