@@ -33,7 +33,9 @@ get_header();
 
 
 <div class="form-wrapper">
-
+	<div id="loading-overlay">
+		<img src="https://cdn.jsdelivr.net/gh/SamHerbert/SVG-Loaders/svg-loaders/tail-spin.svg" alt="Cargando...">
+	</div>
 	<h1 class="form-wrapper__title">Seleccioná el estilo de tu página y carga tu contenido</h1>
 
 	<form method="post" enctype="multipart/form-data" action="/formulario-procesado">
@@ -577,6 +579,18 @@ get_header();
 		}, speedSweep);
 
 	}
+
+	const form = document.querySelector('form');
+	const loadingOverlay = document.querySelector('#loading-overlay');
+
+	form.addEventListener('submit', function () {
+		loadingOverlay.style.display = 'flex';
+	});
+
+	window.addEventListener('load', function () {
+		const loadingOverlay = window.parent.document.querySelector('#loading-overlay');
+		loadingOverlay.style.display = 'none';
+	});
 </script>
 
 <?php
