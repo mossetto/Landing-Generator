@@ -103,18 +103,18 @@ get_header();
 
 		<label for="titulo">Título:</label>
 		<div class="input-text-wrapper">
-			<input type="text" id="titulo" name="titulo" required value="" placeholder="Ejemplo: Raquel y Jeremías">
+			<input type="text" id="titulo" name="titulo" required value="some" placeholder="Ejemplo: Raquel y Jeremías">
 		</div>
 
 		<label for="descripcion">Descripción:</label>
 		<div class="input-text-wrapper">
-			<textarea id="descripcion" name="descripcion" value=""
+			<textarea id="descripcion" name="descripcion" value="some"
 				placeholder="Ejemplo: Se acerca el día ¡Nos casamos!"></textarea>
 		</div>
 
 		<label for="page_name">Slug de la página:</label>
 		<div class="input-text-wrapper">
-			<input type="text" id="page_name" name="page_name" value="" required
+			<input type="text" id="page_name" name="page_name" value="some" required
 				placeholder="Ejemplo: www.fotos.rock/SLUG">
 		</div>
 
@@ -129,7 +129,7 @@ get_header();
 		<label for="invitacion">Invitación</label>
 		<div class="input-text-wrapper">
 			<input type="text" id="invitacion" name="invitacion" required
-				placeholder="Ejemplo: Se acerca un dia especial y queremos que lo celebres con nosotros, te invitamos ...">
+				placeholder="Ejemplo: Se acerca un dia especial y queremos que lo celebres con nosotros, te invitamos ..." value="some">
 		</div>
 
 		<label for="frase">Frase o cíta alusiva</label>
@@ -143,7 +143,7 @@ get_header();
 
 		<label for="fecha_evento">Fecha del evento:</label>
 		<div class="input-text-wrapper">
-			<input type="date" id="fecha_evento" name="fecha_evento" pattern="d-m-Y" value="">
+			<input type="date" id="fecha_evento" name="fecha_evento" pattern="d-m-Y" value="some">
 		</div>
 
 		<label for="cuenta_regresiva">Mostrar cuenta regresiva?:</label>
@@ -159,17 +159,17 @@ get_header();
 		<div class="wrap-festejo">
 			<label for="hora_festejo">Hora del festejo:</label>
 			<div class="input-text-wrapper">
-				<input type="time" id="hora_festejo" name="hora_festejo" pattern="HH:mm" value="">
+				<input type="time" id="hora_festejo" name="hora_festejo" pattern="HH:mm" value="some">
 			</div>
 
 			<label for="nombre_salon_festejo">Nombre del salon:</label>
 			<div class="input-text-wrapper">
-				<input type="text" id="nombre_salon_festejo" name="nombre_salon_festejo" value=""
+				<input type="text" id="nombre_salon_festejo" name="nombre_salon_festejo" value="some"
 					placeholder="Ejemplo: Salón Antorcha Palace">
 			</div>
 
 			<label for="direccion_festejo">Dirección del salon:</label>
-			<input type="text" id="direccion_festejo" name="direccion_festejo" placeholder="Calle 123, Ciudad" value="">
+			<input type="text" id="direccion_festejo" name="direccion_festejo" placeholder="Calle 123, Ciudad" value="some">
 			<div id="map_festejo"></div>
 
 		</div>
@@ -178,19 +178,19 @@ get_header();
 		<div class="wrap-ceremonia">
 			<label for="hora_ceremonia">Hora de ceremonia/ registro (Opcional):</label>
 			<div class="input-text-wrapper">
-				<input type="time" id="hora_ceremonia" name="hora_ceremonia" pattern="HH:mm" value="">
+				<input type="time" id="hora_ceremonia" name="hora_ceremonia" pattern="HH:mm" value="some">
 			</div>
 
 			<label for="nombre_salon_ceremonia">Nombre del salon:</label>
 			<div class="input-text-wrapper">
-				<input type="text" id="nombre_salon_ceremonia" name="nombre_salon_ceremonia" value=""
+				<input type="text" id="nombre_salon_ceremonia" name="nombre_salon_ceremonia" value="some"
 					placeholder="Ejemplo: Capilla del Milagro">
 			</div>
 
 			<label for="direccion_ceremonia">Dirección de la ceremonia:</label>
 			<div class="input-text-wrapper">
 				<input type="text" id="direccion_ceremonia" name="direccion_ceremonia" placeholder="Avenida 123, Ciudad"
-					value="">
+					value="some">
 			</div>
 			<div id="map_ceremonia"></div>
 
@@ -206,21 +206,21 @@ get_header();
 
 		<label for="invitacion_adultos">Valor invtiación adultos:</label>
 		<div class="input-text-wrapper">
-			<input type="text" id="invitacion_adultos" name="invitacion_adultos" value="" placeholder="Ejemplo: $3.000">
+			<input type="text" id="invitacion_adultos" name="invitacion_adultos" value="some" placeholder="Ejemplo: $3.000">
 		</div>
 
 		<label for="invitacion_menores">Valor invtiación niños:</label>
 		<div class="input-text-wrapper">
-			<input type="text" id="invitacion_menores" name="invitacion_menores" value="" placeholder="Ejemplo: $6.000">
+			<input type="text" id="invitacion_menores" name="invitacion_menores" value="some" placeholder="Ejemplo: $6.000">
 		</div>
 
 		<label for="notificacion_asistencia">Cuando alguien confirme su asistencia, te enviaremos un mail a:</label>
-		<input type="email" id="notificacion_asistencia" name="notificacion_asistencia" value=""
+		<input type="email" id="notificacion_asistencia" name="notificacion_asistencia" value="some"
 			placeholder="Ejemplo: micael@gmail.com">
 
 		<label for="fecha_confirmar">Fecha límite para confirmar asistencia (Opcional):</label>
 		<div class="input-text-wrapper">
-			<input type="date" id="fecha_confirmar" name="fecha_confirmar" pattern="d-m-Y" value="">
+			<input type="date" id="fecha_confirmar" name="fecha_confirmar" pattern="d-m-Y" value="some">
 		</div>
 
 		<input type="submit" name="submit" value="Crear página">
