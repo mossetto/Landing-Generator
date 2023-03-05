@@ -35,10 +35,11 @@ $notificacion_asistencia = get_field('notificacion_asistencia', get_the_ID());
 $fecha_confirmar = get_field('fecha_confirmar', get_the_ID());
 $fecha_confirmar = date('Y-d-m', strtotime($fecha_confirmar));
 $cuenta_regresiva = get_field('cuenta_regresiva', get_the_ID());
-
+$key_value = get_field('google_maps_key', 'option');
 ?>
 <script
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRuFKJYnF2-JFtWjPgWaWsr6uciFL94kE&libraries=places"></script>
+src="https://maps.googleapis.com/maps/api/js?key=<?php echo $key_value;?>&libraries=places"></script>
+
 <style>
 	/* Estilos para el fondo y el texto */
 	.galeria {

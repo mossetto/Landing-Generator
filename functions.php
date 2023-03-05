@@ -428,3 +428,6 @@ function my_acf_json_load_point( $paths ) {
 }
 
 
+if( function_exists('acf_add_options_page') ) {
+    acf_add_options_page();
+}

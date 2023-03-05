@@ -14,6 +14,7 @@ $cantidad_de_sitios_disponibles = get_field('cantidad_de_sitios_disponibles', 'u
 // Obtiene la ID de la página "crea-tu-pagina" usando su slug
 $page = get_page_by_path('crea-tu-sitio');
 $page_id = $page->ID;
+$key_value = get_field('google_maps_key', 'option');
 
 // Verifica si el usuario está registrado y tiene páginas pendientes de crear
 if (is_user_logged_in() && $cantidad_de_sitios_disponibles === 0) {
@@ -26,7 +27,7 @@ get_header();
 ?>
 
 <script
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRuFKJYnF2-JFtWjPgWaWsr6uciFL94kE&libraries=places"></script>
+	src="https://maps.googleapis.com/maps/api/js?key=<?php echo $key_value;?>&libraries=places"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">

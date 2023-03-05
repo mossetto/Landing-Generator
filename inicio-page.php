@@ -11,24 +11,26 @@ if (!defined('ABSPATH')) {
 	exit;
 }
 get_header();
+$landing_product = get_field('id_landing_item_woocommerce_product', 'option');
+
 ?>
 
 
 
-						<?php
-						/**
-						 *Template Name: Inicio
-						 *
-						 * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
-						 *
-						 * @package Fotos_Rock
-						 */
+<?php
+/**
+ *Template Name: Inicio
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package Fotos_Rock
+ */
 
-						if (!defined('ABSPATH')) {
-							exit;
-						}
-						get_header();
-						?>
+if (!defined('ABSPATH')) {
+	exit;
+}
+get_header();
+?>
 
 <div class="is-boxed has-animations">
 	<div class="body-wrap boxed-container">
@@ -38,16 +40,21 @@ get_header();
 					<div class="brand header-brand">
 						<h1 class="m-0">
 							<a href="<?php echo get_site_url() ?>">
-								<img class="header-logo-image asset-light" src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/logo-light.svg" alt="Logo">
-								<img class="header-logo-image asset-dark" src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/logo-dark.svg" alt="Logo">
+								<img class="header-logo-image asset-light"
+									src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/logo-light.svg"
+									alt="Logo">
+								<img class="header-logo-image asset-dark"
+									src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/logo-dark.svg"
+									alt="Logo">
 							</a>
 						</h1>
 					</div>
 					<div class="menu-home">
-			<a class="menu-home__acceso"
-				href="<?php echo esc_url(wc_get_account_endpoint_url('my-account')); ?>">Acceso usuarios <img
-				src="<?php echo get_template_directory_uri(); ?>/assets/images/user-icon.svg" alt=""></a>
-		</div>
+						<a class="menu-home__acceso"
+							href="<?php echo esc_url(wc_get_account_endpoint_url('my-account')); ?>">Acceso usuarios
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/user-icon.svg"
+								alt=""></a>
+					</div>
 				</div>
 			</div>
 		</header>
@@ -61,7 +68,8 @@ get_header();
 							<p class="hero-paragraph">Galería e invitación virtual para eventos.<br>Creá hoy tu página y
 								sorprendé a tus invitados!.</p>
 							<div class="hero-cta">
-								<a class="button-home button-primary" href="<?php echo esc_url(add_query_arg('add-to-cart', 557)); ?>">Crear mi web</a>
+								<a class="button-home button-primary"
+									href="<?php echo esc_url(add_query_arg('add-to-cart', $landing_product)); ?>">Crear mi web</a>
 								<div class="lights-toggle">
 									<p class="precio">Un solo pago <br> de $3.600 </p>
 									<!-- <input id="lights-toggle" type="checkbox" name="lights-toggle" class="switch" checked="checked">
@@ -72,18 +80,23 @@ get_header();
 						<div class="hero-media">
 							<div class="header-illustration">
 								<img class="header-illustration-image asset-light"
-									src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/header-illustration-light.svg" alt="Header illustration">
+									src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/header-illustration-light.svg"
+									alt="Header illustration">
 								<img class="header-illustration-image asset-dark"
-									src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/header-illustration-dark.svg" alt="Header illustration">
+									src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/header-illustration-dark.svg"
+									alt="Header illustration">
 							</div>
 							<div class="hero-media-illustration">
 								<img class="hero-media-illustration-image asset-light"
-									src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/hero-media-illustration-light.svg" alt="Hero media illustration">
+									src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/hero-media-illustration-light.svg"
+									alt="Hero media illustration">
 								<img class="hero-media-illustration-image asset-dark"
-									src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/hero-media-illustration-dark.svg" alt="Hero media illustration">
+									src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/hero-media-illustration-dark.svg"
+									alt="Hero media illustration">
 							</div>
 							<div class="hero-media-container">
-								<img class="hero-media-image asset-light" src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/casados.svg"
+								<img class="hero-media-image asset-light"
+									src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/casados.svg"
 									alt="Hero media">
 							</div>
 						</div>
@@ -131,10 +144,12 @@ get_header();
 				<div class="slider__control">
 
 					<div class="slider__control prev">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/flecha-derecha.png" alt="Derecha">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/flecha-derecha.png"
+							alt="Derecha">
 					</div>
 					<div class="slider__control next">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/flecha-derecha.png" alt="Izquierda">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/flecha-derecha.png"
+							alt="Izquierda">
 
 					</div>
 				</div>
@@ -150,15 +165,19 @@ get_header();
 									una web personalizada para ese día tan especial.</p>
 								<div class="features-image">
 									<img class="features-illustration asset-dark"
-										src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/features-illustration-dark.svg" alt="Feature illustration">
-									<img class="features-box asset-dark" src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/features-box-dark.svg"
+										src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/features-illustration-dark.svg"
+										alt="Feature illustration">
+									<img class="features-box asset-dark"
+										src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/features-box-dark.svg"
 										alt="Feature box">
 									<img class="features-illustration asset-dark"
 										src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/features-illustration-top-dark.svg"
 										alt="Feature illustration top">
 									<img class="features-illustration asset-light"
-										src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/features-illustration-light.svg" alt="Feature illustration">
-									<img class="features-box asset-light" src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/quince.svg"
+										src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/features-illustration-light.svg"
+										alt="Feature illustration">
+									<img class="features-box asset-light"
+										src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/quince.svg"
 										alt="Feature box">
 									<img class="features-illustration asset-light"
 										src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/features-illustration-top-light.svg"
@@ -171,9 +190,12 @@ get_header();
 							<div class="feature is-revealing">
 								<div class="feature-inner">
 									<div class="feature-icon">
-										<img class="asset-light" src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/feature-01-light.svg"
+										<img class="asset-light"
+											src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/feature-01-light.svg"
 											alt="Feature 01">
-										<img class="asset-dark" src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/feature-01-dark.svg" alt="Feature 01">
+										<img class="asset-dark"
+											src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/feature-01-dark.svg"
+											alt="Feature 01">
 									</div>
 									<div class="feature-content">
 										<h3 class="feature-title mt-0">Galería de fotos y video</h3>
@@ -185,9 +207,12 @@ get_header();
 							<div class="feature is-revealing">
 								<div class="feature-inner">
 									<div class="feature-icon">
-										<img class="asset-light" src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/feature-02-light.svg"
+										<img class="asset-light"
+											src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/feature-02-light.svg"
 											alt="Feature 02">
-										<img class="asset-dark" src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/feature-02-dark.svg" alt="Feature 02">
+										<img class="asset-dark"
+											src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/feature-02-dark.svg"
+											alt="Feature 02">
 									</div>
 									<div class="feature-content">
 										<h3 class="feature-title mt-0">Información del evento</h3>
@@ -199,9 +224,12 @@ get_header();
 							<div class="feature is-revealing">
 								<div class="feature-inner">
 									<div class="feature-icon">
-										<img class="asset-light" src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/feature-03-light.svg"
+										<img class="asset-light"
+											src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/feature-03-light.svg"
 											alt="Feature 03">
-										<img class="asset-dark" src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/feature-03-dark.svg" alt="Feature 03">
+										<img class="asset-dark"
+											src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/feature-03-dark.svg"
+											alt="Feature 03">
 									</div>
 									<div class="feature-content">
 										<h3 class="feature-title mt-0">Confirmación de asistencia</h3>
@@ -224,7 +252,8 @@ get_header();
 								sorprendé a tus invitados en ese evento tan especial.</p>
 							<div class="cta-cta">
 								<p class="">Un solo pago <br> de $3.600 </p>
-								<a class="button-home button-primary" href="<?php echo esc_url(add_query_arg('add-to-cart', 557)); ?>">Comenzar</a>
+								<a class="button-home button-primary"
+									href="<?php echo esc_url(add_query_arg('add-to-cart', $landing_product)); ?>">Comenzar</a>
 							</div>
 						</div>
 					</div>
@@ -237,8 +266,12 @@ get_header();
 				<div class="site-footer-inner">
 					<div class="brand footer-brand">
 						<a href="#">
-							<img class="asset-light" src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/logo-light.svg" alt="Logo">
-							<img class="asset-dark" src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/logo-dark.svg" alt="Logo">
+							<img class="asset-light"
+								src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/logo-light.svg"
+								alt="Logo">
+							<img class="asset-dark"
+								src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/logo-dark.svg"
+								alt="Logo">
 						</a>
 					</div>
 					<ul class="footer-links list-reset">
@@ -295,316 +328,316 @@ get_header();
 </div>
 <script>
 	let slider = document.querySelector('.slider'),
-	slides = Array.from(slider.children);
+		slides = Array.from(slider.children);
 
-let sliderControll = document.querySelectorAll('.slider__control');
+	let sliderControll = document.querySelectorAll('.slider__control');
 
-let slidesToShow = 1;
-const speedSweep = 400;
-let setDefaultCards = true;
+	let slidesToShow = 1;
+	const speedSweep = 400;
+	let setDefaultCards = true;
 
-// Set Default responsive Cards quantity 
+	// Set Default responsive Cards quantity 
 
-const mediaXl = window.matchMedia('(min-width: 1200px)'),
-	mediaMd = window.matchMedia('(max-width: 1200px)'),
-	mediaSm = window.matchMedia('(max-width: 576px)');
+	const mediaXl = window.matchMedia('(min-width: 1200px)'),
+		mediaMd = window.matchMedia('(max-width: 1200px)'),
+		mediaSm = window.matchMedia('(max-width: 576px)');
 
-function mediaXlchange(e) {
+	function mediaXlchange(e) {
 
-	if (e.matches) {
-		slidesToShow = 4;
-		initClassNamming();
-	}
-}
-
-function mediaMdchange(e) {
-
-	if (e.matches) {
-		slidesToShow = 2;
-		initClassNamming();
-	}
-}
-
-function mediaSmchange(e) {
-
-	if (e.matches) {
-		slidesToShow = 1;
-		initClassNamming();
-	}
-}
-
-mediaSm.addListener(mediaSmchange);
-mediaMd.addListener(mediaMdchange);
-mediaXl.addListener(mediaXlchange);
-
-if (setDefaultCards) {
-	mediaXlchange(mediaXl)
-	mediaMdchange(mediaMd)
-	mediaSmchange(mediaSm)
-}
-
-// Nombramiento de clases inicial - Transition speed
-function initClassNamming() {
-	slides.forEach((slide, index) => {
-		slide.classList.remove('slide-visible');
-		slide.classList.remove('end-deck');
-		slide.classList.remove('start-deck');
-		slide.style.removeProperty('z-index');
-		
-		slide.style.transition = speedSweep / 980 + 's';
-		slide.style.animationDuration = speedSweep / 980 + 's';
-
-		// asignamos clase de slider a todas las cards
-		slide.classList.add('slider__slide')
-
-		// asignamos clase visible a las primeras 4 cards
-		if (index <= slidesToShow - 1) {
-
-			slide.classList.add('slide-visible');
-
-			// dejar el resto en end-deck
-		} else {
-			slide.classList.add('end-deck');
-
+		if (e.matches) {
+			slidesToShow = 4;
+			initClassNamming();
 		}
-		setTimeout(() => {
-			let visibles = slider.querySelectorAll('.slide-visible');
-
-			visibles[visibles.length - 1].style.zIndex = 0;
-		}, speedSweep);
-
-	})
-	if (slidesToShow == 1) {
-		slider.classList.add('one-card');
 	}
-	orderIndexEnddeck();
 
-}
+	function mediaMdchange(e) {
 
-initClassNamming();
+		if (e.matches) {
+			slidesToShow = 2;
+			initClassNamming();
+		}
+	}
 
-// acomodar el index del end-deck
-let enddeck = slider.querySelectorAll('.end-deck');
+	function mediaSmchange(e) {
 
-function orderIndexEnddeck() {
+		if (e.matches) {
+			slidesToShow = 1;
+			initClassNamming();
+		}
+	}
 
+	mediaSm.addListener(mediaSmchange);
+	mediaMd.addListener(mediaMdchange);
+	mediaXl.addListener(mediaXlchange);
+
+	if (setDefaultCards) {
+		mediaXlchange(mediaXl)
+		mediaMdchange(mediaMd)
+		mediaSmchange(mediaSm)
+	}
+
+	// Nombramiento de clases inicial - Transition speed
+	function initClassNamming() {
+		slides.forEach((slide, index) => {
+			slide.classList.remove('slide-visible');
+			slide.classList.remove('end-deck');
+			slide.classList.remove('start-deck');
+			slide.style.removeProperty('z-index');
+
+			slide.style.transition = speedSweep / 980 + 's';
+			slide.style.animationDuration = speedSweep / 980 + 's';
+
+			// asignamos clase de slider a todas las cards
+			slide.classList.add('slider__slide')
+
+			// asignamos clase visible a las primeras 4 cards
+			if (index <= slidesToShow - 1) {
+
+				slide.classList.add('slide-visible');
+
+				// dejar el resto en end-deck
+			} else {
+				slide.classList.add('end-deck');
+
+			}
+			setTimeout(() => {
+				let visibles = slider.querySelectorAll('.slide-visible');
+
+				visibles[visibles.length - 1].style.zIndex = 0;
+			}, speedSweep);
+
+		})
+		if (slidesToShow == 1) {
+			slider.classList.add('one-card');
+		}
+		orderIndexEnddeck();
+
+	}
+
+	initClassNamming();
+
+	// acomodar el index del end-deck
 	let enddeck = slider.querySelectorAll('.end-deck');
 
-	enddeck.forEach((endCard, index) => {
-
-		endCard.style.zIndex = '-' + index - 1;
-
-	})
-
-}
-
-// Escuchar click en controllers
-
-sliderControll.forEach(control => {
-
-	control.addEventListener('click', () => {
+	function orderIndexEnddeck() {
 
 		let enddeck = slider.querySelectorAll('.end-deck');
+
+		enddeck.forEach((endCard, index) => {
+
+			endCard.style.zIndex = '-' + index - 1;
+
+		})
+
+	}
+
+	// Escuchar click en controllers
+
+	sliderControll.forEach(control => {
+
+		control.addEventListener('click', () => {
+
+			let enddeck = slider.querySelectorAll('.end-deck');
+			let startdeck = slider.querySelectorAll('.start-deck');
+
+			if (control.classList.contains('next') && enddeck.length >= 1) {
+
+				nextClicked();
+
+				setTimeout(() => {
+					disableControl();
+				}, speedSweep);
+
+			}
+			if (control.classList.contains('prev') && startdeck.length >= 1) {
+
+				prevClicked();
+
+				setTimeout(() => {
+					disableControl();
+				}, speedSweep);
+			}
+
+			control.classList.remove('disable');
+
+			// Disable click while transition
+			control.classList.add('wait-transition');
+
+			setTimeout(() => {
+				control.classList.remove('wait-transition');
+			}, speedSweep);
+
+
+		})
+
+	})
+
+	// disable buttons if unnecesary
+	function disableControl() {
+
 		let startdeck = slider.querySelectorAll('.start-deck');
+		let enddeck = slider.querySelectorAll('.end-deck');
 
-		if (control.classList.contains('next') && enddeck.length >= 1) {
+		if (startdeck.length <= 0) {
 
-			nextClicked();
-
-			setTimeout(() => {
-				disableControl();
-			}, speedSweep);
+			document.querySelector('.prev').classList.add('disable');
+		} else {
+			document.querySelector('.prev').classList.remove('disable');
 
 		}
-		if (control.classList.contains('prev') && startdeck.length >= 1) {
 
-			prevClicked();
 
-			setTimeout(() => {
-				disableControl();
-			}, speedSweep);
+		if (enddeck.length <= 0) {
+
+			document.querySelector('.next').classList.add('disable');
+		} else {
+			document.querySelector('.next').classList.remove('disable');
+
 		}
 
-		control.classList.remove('disable');
 
-		// Disable click while transition
-		control.classList.add('wait-transition');
+	}
+	disableControl();
+
+
+	// Next button
+	function nextClicked() {
+
+		let visibles = slider.querySelectorAll('.slide-visible');
+		let enddeck = slider.querySelectorAll('.end-deck');
+
+		// Animacion a ultimos 3 visibles
+		visibles.forEach((visible, index) => {
+
+			if (index >= 1) {
+				visibles[0].style.zIndex = 0;
+				visible.classList.add('next-transition');
+				visible.style.zIndex = 2;
+
+				setTimeout(() => {
+					visible.classList.remove('next-transition');
+					visible.style.removeProperty('z-index');
+
+				}, speedSweep);
+
+			}
+
+		})
+
+		// Primer en End-deck pasa a ser ultimo en Visibles
 
 		setTimeout(() => {
-			control.classList.remove('wait-transition');
+			enddeck[0].style.zIndex = 0;
+			enddeck[0].classList.remove('end-deck');
+			enddeck[0].classList.add('slide-visible');
 		}, speedSweep);
 
+		// Primer en visibles pasa a ser ultimo en start-deck
 
-	})
-
-})
-
-// disable buttons if unnecesary
-function disableControl() {
-
-	let startdeck = slider.querySelectorAll('.start-deck');
-	let enddeck = slider.querySelectorAll('.end-deck');
-
-	if (startdeck.length <= 0) {
-
-		document.querySelector('.prev').classList.add('disable');
-	} else {
-		document.querySelector('.prev').classList.remove('disable');
+		setTimeout(() => {
+			visibles[0].classList.add('start-deck');
+			visibles[0].classList.remove('slide-visible');
+			visibles[0].style.removeProperty('z-index');
+			orderIndexEnddeck();
+		}, speedSweep);
 
 	}
 
+	// Prev button
+	function prevClicked() {
 
-	if (enddeck.length <= 0) {
+		let visibles = slider.querySelectorAll('.slide-visible');
+		let startdeck = slider.querySelectorAll('.start-deck');
 
-		document.querySelector('.next').classList.add('disable');
-	} else {
-		document.querySelector('.next').classList.remove('disable');
+		// Animacion a primeros 3 visibles
 
-	}
+		visibles.forEach((visible, index) => {
 
+			if (index <= slidesToShow - 2) {
 
-}
-disableControl();
+				visibles[visibles.length - 1].style.zIndex = 0;
 
-
-// Next button
-function nextClicked() {
-
-	let visibles = slider.querySelectorAll('.slide-visible');
-	let enddeck = slider.querySelectorAll('.end-deck');
-
-	// Animacion a ultimos 3 visibles
-	visibles.forEach((visible, index) => {
-
-		if (index >= 1) {
-			visibles[0].style.zIndex = 0;
-			visible.classList.add('next-transition');
-			visible.style.zIndex = 2;
-
-			setTimeout(() => {
-				visible.classList.remove('next-transition');
+				visible.classList.add('prev-transition');
 				visible.style.removeProperty('z-index');
 
-			}, speedSweep);
+				setTimeout(() => {
+					visible.classList.remove('prev-transition');
 
-		}
+				}, speedSweep);
 
-	})
+			}
 
-	// Primer en End-deck pasa a ser ultimo en Visibles
+		})
 
-	setTimeout(() => {
-		enddeck[0].style.zIndex = 0;
-		enddeck[0].classList.remove('end-deck');
-		enddeck[0].classList.add('slide-visible');
-	}, speedSweep);
+		// Ultimo en Start-deck pasa a ser primero en visible
+		setTimeout(() => {
+			startdeck[startdeck.length - 1].classList.remove('start-deck');
+			startdeck[startdeck.length - 1].classList.add('slide-visible');
+		}, speedSweep);
 
-	// Primer en visibles pasa a ser ultimo en start-deck
+		// Ultimo en visibles pasa a ser primero en end-deck
 
-	setTimeout(() => {
-		visibles[0].classList.add('start-deck');
-		visibles[0].classList.remove('slide-visible');
-		visibles[0].style.removeProperty('z-index');
-		orderIndexEnddeck();
-	}, speedSweep);
+		setTimeout(() => {
+			visibles[visibles.length - 1].classList.remove('slide-visible');
+			visibles[visibles.length - 1].classList.add('end-deck');
+			visibles[visibles.length - 2].style.zIndex = 0;
 
-}
+			orderIndexEnddeck();
 
-// Prev button
-function prevClicked() {
+		}, speedSweep);
 
-	let visibles = slider.querySelectorAll('.slide-visible');
-	let startdeck = slider.querySelectorAll('.start-deck');
-
-	// Animacion a primeros 3 visibles
-
-	visibles.forEach((visible, index) => {
-
-		if (index <= slidesToShow - 2) {
-
-			visibles[visibles.length - 1].style.zIndex = 0;
-
-			visible.classList.add('prev-transition');
-			visible.style.removeProperty('z-index');
-
-			setTimeout(() => {
-				visible.classList.remove('prev-transition');
-
-			}, speedSweep);
-
-		}
-
-	})
-
-	// Ultimo en Start-deck pasa a ser primero en visible
-	setTimeout(() => {
-		startdeck[startdeck.length - 1].classList.remove('start-deck');
-		startdeck[startdeck.length - 1].classList.add('slide-visible');
-	}, speedSweep);
-
-	// Ultimo en visibles pasa a ser primero en end-deck
-
-	setTimeout(() => {
-		visibles[visibles.length - 1].classList.remove('slide-visible');
-		visibles[visibles.length - 1].classList.add('end-deck');
-		visibles[visibles.length - 2].style.zIndex = 0;
-
-		orderIndexEnddeck();
-
-	}, speedSweep);
-
-}
-(function () {
-
-  const doc = document
-  const rootEl = doc.documentElement
-  const body = doc.body
-  const lightSwitch = doc.getElementById('lights-toggle')
-  /* global ScrollReveal */
-  const sr = window.sr = ScrollReveal()
-
-  rootEl.classList.remove('no-js')
-  rootEl.classList.add('js')
-
-  window.addEventListener('load', function () {
-	body.classList.add('is-loaded')
-  })
-
-  // Reveal animations
-  function revealAnimations () {
-	sr.reveal('.feature', {
-	  duration: 600,
-	  distance: '20px',
-	  easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
-	  origin: 'right',
-	  viewFactor: 0.2
-	})
-  }
-
-  if (body.classList.contains('has-animations')) {
-	window.addEventListener('load', revealAnimations)
-  }
-
-  // Light switcher
-  if (lightSwitch) {
-	window.addEventListener('load', checkLights)
-	lightSwitch.addEventListener('change', checkLights)
-  }
-
-  function checkLights () {
-	let labelText = lightSwitch.parentNode.querySelector('.label-text')
-	if (lightSwitch.checked) {
-	  body.classList.remove('lights-off')
-	  if (labelText) {
-		labelText.innerHTML = 'dark'
-	  }
-	} else {
-	  body.classList.add('lights-off')
-	  if (labelText) {
-		labelText.innerHTML = 'light'
-	  }
 	}
-  }
-}())
+	(function () {
+
+		const doc = document
+		const rootEl = doc.documentElement
+		const body = doc.body
+		const lightSwitch = doc.getElementById('lights-toggle')
+		/* global ScrollReveal */
+		const sr = window.sr = ScrollReveal()
+
+		rootEl.classList.remove('no-js')
+		rootEl.classList.add('js')
+
+		window.addEventListener('load', function () {
+			body.classList.add('is-loaded')
+		})
+
+		// Reveal animations
+		function revealAnimations() {
+			sr.reveal('.feature', {
+				duration: 600,
+				distance: '20px',
+				easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
+				origin: 'right',
+				viewFactor: 0.2
+			})
+		}
+
+		if (body.classList.contains('has-animations')) {
+			window.addEventListener('load', revealAnimations)
+		}
+
+		// Light switcher
+		if (lightSwitch) {
+			window.addEventListener('load', checkLights)
+			lightSwitch.addEventListener('change', checkLights)
+		}
+
+		function checkLights() {
+			let labelText = lightSwitch.parentNode.querySelector('.label-text')
+			if (lightSwitch.checked) {
+				body.classList.remove('lights-off')
+				if (labelText) {
+					labelText.innerHTML = 'dark'
+				}
+			} else {
+				body.classList.add('lights-off')
+				if (labelText) {
+					labelText.innerHTML = 'light'
+				}
+			}
+		}
+	}())
 
 </script>
