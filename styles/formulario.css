@@ -61,6 +61,9 @@ html {
     cursor: pointer;
     outline: 3px solid transparent;
 }
+.form-wrapper form .slider__title {
+    color: black;
+}
 
 .form-wrapper form .slider__slide:hover {
     outline: 3px solid #1fbf9b;

@@ -12,7 +12,7 @@ if (!defined('ABSPATH')) {
 }
 get_header();
 $landing_product = get_field('id_landing_item_woocommerce_product', 'option');
-
+$product_price = get_post_meta($landing_product, '_regular_price', true);
 ?>
 
 
@@ -69,9 +69,10 @@ get_header();
 								sorprendé a tus invitados!.</p>
 							<div class="hero-cta">
 								<a class="button-home button-primary"
-									href="<?php echo esc_url(add_query_arg('add-to-cart', $landing_product)); ?>">Crear mi web</a>
+									href="<?php echo esc_url(add_query_arg('add-to-cart', $landing_product)); ?>">Crear
+									mi web</a>
 								<div class="lights-toggle">
-									<p class="precio">Un solo pago <br> de $3.600 </p>
+									<p class="precio">Pago único<br>de $<?php echo $product_price; ?></p>
 									<!-- <input id="lights-toggle" type="checkbox" name="lights-toggle" class="switch" checked="checked">
 									<label for="lights-toggle" class="text-xs"><span>Turn me <span class="label-text">dark</span></span></label> -->
 								</div>
@@ -109,7 +110,41 @@ get_header();
 				<p class="section-paragraph">Encontrá el diseño perfecto para tu tipo de evento.</p>
 
 				<div class="slider">
-					<div><img class="slider__img"
+
+					<?php
+
+					$args = array(
+						'post_type' => 'templates',
+						'posts_per_page' => -1,
+						// Muestra todos los posts
+						'order' => 'ASC'
+					);
+
+					$templates = new WP_Query($args);
+
+					if ($templates->have_posts()) {
+						while ($templates->have_posts()) {
+							$templates->the_post();
+							$categories = get_the_category();
+							?>
+
+							<div>
+								<span class="slider__title">Estilo #
+									<?php echo the_title(); ?> -
+									<?php echo $categories[0]->name; ?>
+								</span>
+								<img class="slider__img"
+									src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo the_title(); ?>/<?php echo the_title(); ?>.jpg">
+								<a class="slider__demo" href="#" target="_blank">Ver demo</a>
+							</div>
+
+						<?php }
+
+						wp_reset_postdata();
+					}
+
+					?>
+					<!-- <div><img class="slider__img"
 							src="https://websitedemos.net/wp-content/uploads/2017/12/brandstore-02-1-600x1856.jpg">
 						<a class="slider__demo" href="#" target="_blank">Ver demo</a>
 					</div>
@@ -137,7 +172,7 @@ get_header();
 							src="https://websitedemos.net/wp-content/uploads/2017/12/brandstore-02-1-600x1856.jpg">
 						<a class="slider__demo" href="#" target="_blank">Ver demo</a>
 
-					</div>
+					</div> -->
 
 				</div>
 
@@ -242,7 +277,6 @@ get_header();
 					</div>
 				</div>
 			</section>
-
 			<section class="cta section">
 				<div class="container-sm">
 					<div class="cta-inner section-inner">
@@ -251,7 +285,7 @@ get_header();
 							<p class="section-paragraph">Personalizar tu sitio es muy simple, comenzá hoy mismo y
 								sorprendé a tus invitados en ese evento tan especial.</p>
 							<div class="cta-cta">
-								<p class="">Un solo pago <br> de $3.600 </p>
+								<p class="">Pago único<br>de $<?php echo $product_price; ?></p>
 								<a class="button-home button-primary"
 									href="<?php echo esc_url(add_query_arg('add-to-cart', $landing_product)); ?>">Comenzar</a>
 							</div>

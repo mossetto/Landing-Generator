@@ -431,3 +431,42 @@ function my_acf_json_load_point( $paths ) {
 if( function_exists('acf_add_options_page') ) {
     acf_add_options_page();
 }
+
+
+
+function crear_cpt_templates() {
+	$labels = array(
+	  'name' => 'Templates',
+	  'singular_name' => 'Template',
+	  'menu_name' => 'Templates',
+	  'add_new' => 'Agregar Nuevo',
+	  'add_new_item' => 'Agregar Nuevo Template',
+	  'edit_item' => 'Editar Template',
+	  'new_item' => 'Nuevo Template',
+	  'view_item' => 'Ver Template',
+	  'search_items' => 'Buscar Templates',
+	  'not_found' => 'No se encontraron Templates',
+	  'not_found_in_trash' => 'No se encontraron Templates en la papelera',
+	  'parent_item_colon' => ''
+	);
+  
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'query_var' => true,
+		'rewrite' => true,
+		'capability_type' => 'post',
+		'hierarchical' => false,
+		'menu_position' => null,
+		'menu_icon' => 'dashicons-admin-home', // Icono de casa naranja
+		'supports' => array('title','custom-fields'),
+		'taxonomies' => array('category') // Agrega la capacidad de categorías
+	);	
+  
+	register_post_type('templates', $args);
+  }
+  
+  add_action('init', 'crear_cpt_templates');
+  
