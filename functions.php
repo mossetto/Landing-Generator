@@ -470,3 +470,8 @@ function crear_cpt_templates() {
   
   add_action('init', 'crear_cpt_templates');
   
+
+  function my_custom_scripts() {
+	wp_enqueue_script( 'my-script', get_template_directory_uri() . '/theme-scripts.js', array(), '1.0', true );
+  }
+  add_action( 'wp_enqueue_scripts', 'my_custom_scripts' );
