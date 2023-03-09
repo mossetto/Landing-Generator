@@ -97,7 +97,8 @@ get_header();
 							</div>
 							<div class="hero-media-container">
 								<img class="hero-media-image asset-light"
-									src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/casados.svg"
+									style="max-width:484px;" 
+									src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/casados.jpg"
 									alt="Hero media">
 							</div>
 						</div>
@@ -628,7 +629,7 @@ get_header();
 		const body = doc.body
 		const lightSwitch = doc.getElementById('lights-toggle')
 		/* global ScrollReveal */
-		const sr = window.sr = ScrollReveal()
+		// const sr = window.sr = ScrollReveal()
 
 		rootEl.classList.remove('no-js')
 		rootEl.classList.add('js')
