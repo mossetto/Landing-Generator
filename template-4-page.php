@@ -35,6 +35,7 @@ $notificacion_asistencia = get_field('notificacion_asistencia', get_the_ID());
 $fecha_confirmar = get_field('fecha_confirmar', get_the_ID());
 $fecha_confirmar = date('Y-d-m', strtotime($fecha_confirmar));
 $cuenta_regresiva = get_field('cuenta_regresiva', get_the_ID());
+$form_id = get_field('form_id', get_the_ID());
 
 ?>
 
@@ -7309,69 +7310,7 @@ flexibility(document.documentElement);
 														data-widget_type="wpforms.default">
 														<div class="elementor-widget-container">
 															<div class="wpforms-container " id="wpforms-50">
-																<form id="wpforms-form-50"
-																	class="wpforms-validate wpforms-form wpforms-ajax-form"
-																	data-formid="50" method="post"
-																	enctype="multipart/form-data"
-																	action="/?simply_static_page=177"
-																	data-token="311902c2c0a732d4be9281bfd94f5704">
-																	<noscript class="wpforms-error-noscript">Please
-																		enable JavaScript in your browser to complete
-																		this form.</noscript>
-																	<div class="wpforms-field-container">
-																		<div id="wpforms-50-field_0-container"
-																			class="wpforms-field wpforms-field-name"
-																			data-field-id="0">
-																			<label class="wpforms-field-label"
-																				for="wpforms-50-field_0">Name <span
-																					class="wpforms-required-label">*</span></label><input
-																				type="text" id="wpforms-50-field_0"
-																				class="wpforms-field-large wpforms-field-required"
-																				name="wpforms[fields][0]" required>
-																		</div>
-																		<div id="wpforms-50-field_1-container"
-																			class="wpforms-field wpforms-field-email"
-																			data-field-id="1">
-																			<label class="wpforms-field-label"
-																				for="wpforms-50-field_1">Email <span
-																					class="wpforms-required-label">*</span></label><input
-																				type="email" id="wpforms-50-field_1"
-																				class="wpforms-field-large wpforms-field-required"
-																				name="wpforms[fields][1]" required>
-																		</div>
-																		<div id="wpforms-50-field_3-container"
-																			class="wpforms-field wpforms-field-number"
-																			data-field-id="3">
-																			<label class="wpforms-field-label"
-																				for="wpforms-50-field_3">Phone number
-																				<span
-																					class="wpforms-required-label">*</span></label><input
-																				type="number" pattern="\d*"
-																				id="wpforms-50-field_3"
-																				class="wpforms-field-large wpforms-field-required"
-																				name="wpforms[fields][3]" required>
-																		</div>
-																	</div>
-																	<div class="wpforms-submit-container">
-																		<input type="hidden" name="wpforms[id]"
-																			value="50"><input type="hidden"
-																			name="wpforms[author]" value="1"><input
-																			type="hidden" name="wpforms[post_id]"
-																			value="554"><button type="submit"
-																			name="wpforms[submit]"
-																			id="wpforms-submit-50"
-																			class="wpforms-submit"
-																			data-alt-text="Sending..."
-																			data-submit-text="Save up to 50% today"
-																			aria-live="assertive"
-																			value="wpforms-submit">Save up to 50%
-																			today</button><img decoding="async"
-																			src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo $template_style; ?>/wp-content/plugins/wpforms-lite/assets/images/submit-spin.svg"
-																			class="wpforms-submit-spinner"
-																			style="display: none;" width="26"
-																			height="26" alt="Loading">
-																	</div>
-																</form>
+																<?php echo do_shortcode('[contact-form-7 id="' . $form_id . '" title="Contact form 1"]'); ?>
 															</div> <!-- .wpforms-container -->
 														</div>
 													</div>

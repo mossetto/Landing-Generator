@@ -475,3 +475,37 @@ function crear_cpt_templates() {
 	wp_enqueue_script( 'my-script', get_template_directory_uri() . '/theme-scripts.js', array(), '1.0', true );
   }
   add_action( 'wp_enqueue_scripts', 'my_custom_scripts' );
+
+
+  
+  function duplicate_contact_form_69($page_id) {
+	// Verifica si el post creado es una página
+	if(get_post_type($page_id) == 'page') {
+		// Obtiene el post original del formulario
+		$original_post = get_post(69);
+		// Crea un array con los datos del post original
+		$new_post = array(
+			'post_title' => get_the_title($page_id),
+			'post_content' => $original_post->post_content,
+			'post_type' => 'wpcf7_contact_form',
+			'post_status' => 'publish'
+		);
+		// Inserta el nuevo post duplicado
+		$new_post_id = wp_insert_post($new_post);
+
+		// Actualiza el valor del campo form_id
+		update_field('form_id', $new_post_id, $page_id);
+
+		// Obtiene los metadatos del post original
+		$original_post_meta = get_post_meta(69);
+		// Inserta los metadatos del post original en el post duplicado
+		foreach($original_post_meta as $key => $value) {
+			update_post_meta($new_post_id, $key, $value[0]);
+		}
+	}
+}
+
+// Agrega el gancho para la acción 'save_post'
+add_action('save_post', 'duplicate_contact_form_69');
+
+

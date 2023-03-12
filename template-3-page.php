@@ -35,6 +35,7 @@ $notificacion_asistencia = get_field('notificacion_asistencia', get_the_ID());
 $fecha_confirmar = get_field('fecha_confirmar', get_the_ID());
 $fecha_confirmar = date('Y-d-m', strtotime($fecha_confirmar));
 $cuenta_regresiva = get_field('cuenta_regresiva', get_the_ID());
+$form_id = get_field('form_id', get_the_ID());
 
 get_header();
 
@@ -236,6 +237,7 @@ get_header();
 		<?php echo $fecha_confirmar; ?>
 	</p>
 	<p><?php echo $cuenta_regresiva; ?></p>
+	<?php echo do_shortcode('[contact-form-7 id="' . $form_id . '" title="Contact form 1"]'); ?>
 
 </div>
 

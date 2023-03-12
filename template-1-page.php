@@ -36,6 +36,8 @@ $fecha_confirmar = get_field('fecha_confirmar', get_the_ID());
 $fecha_confirmar = date('Y-d-m', strtotime($fecha_confirmar));
 $cuenta_regresiva = get_field('cuenta_regresiva', get_the_ID());
 $key_value = get_field('google_maps_key', 'option');
+$form_id = get_field('form_id', get_the_ID());
+
 ?>
 <script
 src="https://maps.googleapis.com/maps/api/js?key=<?php echo $key_value;?>&libraries=places"></script>
@@ -204,6 +206,8 @@ src="https://maps.googleapis.com/maps/api/js?key=<?php echo $key_value;?>&librar
 	<p><?php echo $notificacion_asistencia; ?></p>
 	<p><?php echo $fecha_confirmar; ?></p>
 	<p><?php echo $cuenta_regresiva; ?></p>
+
+	<?php echo do_shortcode('[contact-form-7 id="' . $form_id . '" title="Contact form 1"]'); ?>
 
 </div>
 
