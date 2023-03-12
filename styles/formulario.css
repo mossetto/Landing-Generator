@@ -74,12 +74,23 @@ html {
     margin-bottom: 20px;
     padding: 10px;
     position: relative;
+    font-size: 13px;
 }
 
 .form-wrapper form .slider__slide-title input {
     margin-right: 10px;
 }
-
+.slider__form-demo{
+    position: absolute;
+    top: -13px;
+    margin-left: 156px;
+    padding: 0px 6px;
+    font-size: 12px;
+    line-height: 22px;
+    border-radius: 8px;
+    background-color: #535fd7;
+    color: white;
+}
 .form-wrapper form .slider__slide.slide-visible {
     position: initial;
     z-index: 1;

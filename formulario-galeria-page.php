@@ -26,8 +26,7 @@ if (is_user_logged_in() && $cantidad_de_sitios_disponibles === 0) {
 get_header();
 ?>
 
-<script
-	src="https://maps.googleapis.com/maps/api/js?key=<?php echo $key_value;?>&libraries=places"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $key_value; ?>&libraries=places"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -47,7 +46,51 @@ get_header();
 			<div class="slider__wrapper">
 				<div class="slider">
 
-					<label>
+					<?php
+
+					$args = array(
+						'post_type' => 'templates',
+						'posts_per_page' => -1,
+						// Muestra todos los posts
+						'order' => 'ASC'
+					);
+
+					$templates = new WP_Query($args);
+
+					if ($templates->have_posts()) {
+						while ($templates->have_posts()) {
+							$templates->the_post();
+							$categories = get_the_category();
+							?>
+
+							<label>
+
+
+								<label>
+									<div class="slider__slide-title"> <input type="radio" name="template_selection"
+											value="2"><span>Estilo #
+									<?php echo the_title(); ?> -
+									<?php echo $categories[0]->name; ?>
+								</span>
+									</div>
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo the_title(); ?>/<?php echo the_title(); ?>.jpg"
+										class="image-option">
+										<a class="slider__form-demo" href="#" target="_blank">Ver demo</a>
+								</label>
+							</label>
+
+
+
+
+						<?php }
+
+						wp_reset_postdata();
+					}
+
+					?>
+
+
+					<!-- <label>
 						<div class="slider__slide-title">
 							<input type="radio" name="template_selection" value="1" required>
 							<span>Evento 1</span>
@@ -90,12 +133,16 @@ get_header();
 						</div>
 						<img src="https://websitedemos.net/wp-content/uploads/2017/12/brandstore-02-1-600x1856.jpg"
 							class="image-option">
-					</label>
+					</label> -->
 				</div>
 				<div class="slider__control">
 
-					<div class="slider__control prev"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/flecha-derecha.png" alt="Derecha"></div>
-					<div class="slider__control next"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/flecha-derecha.png" alt="Derecha"></div>
+					<div class="slider__control prev"><img
+							src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/flecha-derecha.png"
+							alt="Derecha"></div>
+					<div class="slider__control next"><img
+							src="<?php echo get_template_directory_uri(); ?>/assets/images/images-home/flecha-derecha.png"
+							alt="Derecha"></div>
 				</div>
 			</div>
 
@@ -130,7 +177,8 @@ get_header();
 		<label for="invitacion">Invitación</label>
 		<div class="input-text-wrapper">
 			<input type="text" id="invitacion" name="invitacion" required
-				placeholder="Ejemplo: Se acerca un dia especial y queremos que lo celebres con nosotros, te invitamos ..." value="some">
+				placeholder="Ejemplo: Se acerca un dia especial y queremos que lo celebres con nosotros, te invitamos ..."
+				value="some">
 		</div>
 
 		<label for="frase">Frase o cíta alusiva</label>
@@ -170,7 +218,8 @@ get_header();
 			</div>
 
 			<label for="direccion_festejo">Dirección del salon:</label>
-			<input type="text" id="direccion_festejo" name="direccion_festejo" placeholder="Calle 123, Ciudad" value="some">
+			<input type="text" id="direccion_festejo" name="direccion_festejo" placeholder="Calle 123, Ciudad"
+				value="some">
 			<div id="map_festejo"></div>
 
 		</div>
@@ -207,12 +256,14 @@ get_header();
 
 		<label for="invitacion_adultos">Valor invtiación adultos:</label>
 		<div class="input-text-wrapper">
-			<input type="text" id="invitacion_adultos" name="invitacion_adultos" value="some" placeholder="Ejemplo: $3.000">
+			<input type="text" id="invitacion_adultos" name="invitacion_adultos" value="some"
+				placeholder="Ejemplo: $3.000">
 		</div>
 
 		<label for="invitacion_menores">Valor invtiación niños:</label>
 		<div class="input-text-wrapper">
-			<input type="text" id="invitacion_menores" name="invitacion_menores" value="some" placeholder="Ejemplo: $6.000">
+			<input type="text" id="invitacion_menores" name="invitacion_menores" value="some"
+				placeholder="Ejemplo: $6.000">
 		</div>
 
 		<label for="notificacion_asistencia">Cuando alguien confirme su asistencia, te enviaremos un mail a:</label>
