@@ -14,6 +14,8 @@ get_header();
 
 require_once(ABSPATH . "wp-admin" . '/includes/image.php');
 require_once(ABSPATH . "wp-admin" . '/includes/file.php');
+require_once ABSPATH . 'wp-content/themes/Landing-Generator/functions.php';
+// require_once 'functions.php';
 
 $pages = get_posts(
   array(
@@ -67,6 +69,11 @@ if ($cantidad_de_sitios_disponibles > 0 && $page_name != null) {
   // Inserta la página en la base de datos de WordPress
   $page_id = wp_insert_post($page_data);
 
+// Función para duplicar un formulario Contact Form 7 con ID 69
+// Función para duplicar un formulario Contact Form 7 con ID 69
+
+
+  
   // Actualiza la cantidad de sitios disponibles
   $new_site_count = $cantidad_de_sitios_disponibles - 1;
   update_user_meta($current_user->ID, 'cantidad_de_sitios_disponibles', $new_site_count);
@@ -210,7 +217,6 @@ if ($cantidad_de_sitios_disponibles > 0 && $page_name != null) {
   update_field('notificacion_asistencia', $notificacion_asistencia, $page_id);
   update_field('fecha_confirmar', $fecha_confirmar, $page_id);
   update_field('cuenta_regresiva', $cuenta_regresiva, $page_id);
-
 
   // Construye la URL de la página recién creada
   $page_url = get_permalink($page_id);
