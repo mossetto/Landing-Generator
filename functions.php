@@ -485,12 +485,13 @@ function crear_cpt_templates() {
   add_action( 'wp_enqueue_scripts', 'my_custom_scripts' );
 
 
-  
   function duplicate_contact_form_69($page_id) {
+
+	$default_form_id = get_field('default_form_to_clonate', 'option');
 	// Verifica si el post creado es una página
 	if(get_post_type($page_id) == 'page') {
 		// Obtiene el post original del formulario
-		$original_post = get_post(69);
+		$original_post = get_post( $default_form_id);
 		// Crea un array con los datos del post original
 		$new_post = array(
 			'post_title' => get_the_title($page_id),
@@ -505,7 +506,7 @@ function crear_cpt_templates() {
 		update_field('form_id', $new_post_id, $page_id);
 
 		// Obtiene los metadatos del post original
-		$original_post_meta = get_post_meta(69);
+		$original_post_meta = get_post_meta($default_form_id);
 		// Inserta los metadatos del post original en el post duplicado
 		foreach($original_post_meta as $key => $value) {
 			update_post_meta($new_post_id, $key, $value[0]);
