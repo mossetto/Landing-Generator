@@ -180,8 +180,35 @@ update_field('cuenta_regresiva', $cuenta_regresiva, $page_id);
 
 get_header();
 
+  // Construye la URL de la página actualizada
+  $page_url = get_permalink($page_id);
+  $slug = get_field('page_name', $page_id);
 ?>
-<h1>Pagina actualizada</h1>
+<div class="pagina_creada">
+
+
+
+  <h2>!Sitio actualizado con éxito!</h1>
+  <br>
+  <p>Este es el link de tu sitio, click para visitar:</p>
+
+  <a href="<?php echo $page_url; ?>">fotosrock.local/<?php echo $slug?></a>
+
+
+
+</div>
+
+<style>
+.pagina_creada{
+border: 1px solid;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+flex-direction: column
+
+}
+</style>
 <?php
 
 get_footer();
